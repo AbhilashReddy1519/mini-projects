@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="/src/output.css">
+    <style>
+        .box {
+            background-color: #ffffc7;
+            height: 18vmin;
+            width: 18vmin;
+            cursor: pointer;
+            margin: 1px 4px;
+            border-radius: 5px;
+            font-size: 10vmin;
+            color: #b0413e;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-[#548687] text-center">
+    <section class="relative">
+        <div class="absolute top-[12rem] left-[5%] scale-z-100 bg-emerald-400 rounded-lg px-2">
+            <h1 class="text-2xl py-2 font-bold text-[#eefa03]">Game</h1>
+            <div class="flex gap-5 px-4 pb-3">
+                <h1 class="text-lg">Player 1 : <span class="bg-violet-400 rounded-sm px-1 font-bold text-white">O</span></h1>
+                <h1 class="text-lg">Player 2 : <span class="bg-violet-400 rounded-sm px-1.5 font-bold text-white">X</span></h2>
+            </div>
+            <div class="msg-container hide">
+                <p class="px-4 py-2 text-gray-700 p-10">Winner of the Game:</p>
+                <h1 class="px-4 py-2 msg text-lg font-serif "></h1>
+                <button class="newBtn bg-[#191913] text-white text-lg rounded-lg w-34 h-10 my-4">New Game</button>
+            </div>    
+        </div>
+        <div class="relative font-serif">
+            <div class="absolute top-[6rem] right-[2%] bg-emerald-400 rounded-lg px-4 pr-5 py-4 h-auto w-3/12 shadow-lg">
+                <h2 class="text-xl font-bold text-center text-white mb-2">📜 Game Rules</h2>
+                <ul class="list-disc text-lg pl-6 space-y-2 text-gray-900/80">
+                    <li>Player 1 is <span class="font-bold text-yellow-300">"O"</span> and Player 2 is <span class="font-bold text-red-300">"X"</span>.</li>
+                    <li>Players take turns marking a box.</li>
+                    <li>The first player to get three in a row (horizontal, vertical, or diagonal) wins! 🎉</li>
+                    <li>If all 9 boxes are filled and no one wins, it's a draw. 🤝</li>
+                    <li>Click the "Reset Game" button to restart.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <main>
+        <h1 class="text-5xl font-bold font-mono text-lime-200 pt-5">Tic Tac Toe</h1>
+        <div class="h-[70vh] flex justify-center items-center">
+            <div class="h-[60vmin] w-[60vmin] flex flex-wrap justify-center items-center">
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+                <button class="box" aria-label="box"></button>
+            </div>
+        </div>
+        <button id="reset" class="rounded-lg text-lg bg-[#191913] text-white  w-44 h-14 font-bold text-center cursor-pointer">Reset Game</button>
+    </main> 
+    <script src="tic.js"></script>   
+</body>
+</html>
