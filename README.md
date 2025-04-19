@@ -1,5 +1,3 @@
-To complete a `README.md` file for your repository, it's essential to include key information about the repository, its purpose, and usage. Below is a suggested structure for your `README.md` file for the "mini-projects" repository:
-
 ---
 
 # Mini-Projects
