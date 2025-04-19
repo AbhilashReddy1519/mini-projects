@@ -22,7 +22,7 @@
     max-width: 600px;
     border-radius: 20px;
     margin: 20px auto 200px;
-    padding: 20px 0 50px;
+    padding: 20px 0 30px;
 }
 
 .container h1 {
@@ -48,7 +48,6 @@
     /* background: rgb(220, 218, 218); */
     margin: 10px 40px;
     padding: 10px 0;
-    /* border-radius: 30px; */
 }
 
 input {
@@ -56,7 +55,7 @@ input {
     padding: 15px 10px;
     font-size: 1rem;
     border: 1px dashed black;
-    border-radius: 10px;
+    border-radius: 10px 100px / 120px;
     outline: none;
     transition: all 0.3s ease-in;
 }
@@ -67,5 +66,167 @@ input:hover {
 
 input:focus {
     border: 1px solid red;
-    box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+    box-shadow: 0 0 10px rgb(242, 17, 17);
+}
+
+button {
+    padding: 15px 5px;
+    font-size: 1rem;
+    border: 1px solid #1d63ef;
+    outline: none;
+    background: #1d63ef;
+    color: white;
+    border-radius: 10% 10%;
+    margin-left: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+button:hover {
+    background: #0004ff;
+    box-shadow: 0 0 10px #0d00ff;
+}
+
+.completed {
+    margin:  10px 40px;
+    /* border-bottom: 1px solid black; */
+}
+
+.completed h1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.completed h1 span {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: inline-block;
+    font-size: 1.2rem;
+    transform-origin: 50% 50%;
+}
+
+.completed h1 span:hover {
+    transform: translateY(2px);
+    background: rgb(195, 190, 190);
+}
+
+.completed h1 span.rotate {
+    transform: scaleY(-1);
+}
+
+.completed h1 span.rotate:hover {
+    transform: scaleY(-1) translateY(-2px); /* Note: direction is reversed when flipped */
+    background: rgb(195, 190, 190);
+}
+
+.complete-container {
+    list-style: none;
+    margin: 0 20px;
+    margin-top: 10px;
+    transition: all 0.3s ease-in-out;
+    display: none;
+}
+
+.complete-container.hide  {
+    display: contents;
+}
+
+.done {
+    position: relative;
+    padding-left: 50px;
+    margin: 20px 0;
+    text-decoration: line-through;
+    color: rgb(54, 52, 51);
+    word-wrap: break-word;        
+    overflow-wrap: break-word;    
+    padding-right: 30px;         /* Add space for the cross symbol */
+    line-height: 1.4;            /* Improves readability of wrapped text */
+    max-width: 95%;
+}
+
+.done::before {
+    content: '';  /* Required for pseudo-elements */
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;  /* Match width for square aspect ratio */
+    background-image: url(./images/checked.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pending {
+    margin: 0 40px;
+    border-bottom: 1px solid black;
+    padding-bottom: 15px;
+    display: none;
+}
+
+.pending h1 {
+    font-size: 1rem;
+    margin: 0;
+    padding: 10px 0;
+}
+
+#pending-container {
+    list-style: none;
+    margin: 0 20px;
+    margin-top: 10px;
+    /* transition: all 0.3s ease-in-out; */
+    width: 100%;
+    /* max-width: 600px; */
+}
+
+#pending-container li  {
+    margin-left: -20px;
+    padding: 10px 0;
+    padding-left: 40px;
+    position: relative;
+    word-wrap: break-word;        
+    overflow-wrap: break-word;    
+    padding-right: 30px;         /* Add space for the cross symbol */
+    line-height: 1.4;            /* Improves readability of wrapped text */
+    max-width: 95%;
+}
+
+#pending-container li:before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-image: url(./images/unchecked.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 2px;
+    font-weight: 900;
+}
+
+ul li span:hover {
+    background: rgb(113, 108, 108);
+    color: white;
 }
