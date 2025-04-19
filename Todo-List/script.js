@@ -23,10 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let span = document.createElement('span');
         span.innerHTML = "&cross;";
         li.appendChild(span);
-
-
-
         task.value = "";
+        saveData();
     });
 
     pending_container.addEventListener('click', (e) => {
@@ -35,12 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
             completedTask.classList.add('done');
             complete_container.appendChild(completedTask);
             e.target.remove();
+            saveData();
             // we cannot do both append and remove at once
         } else if(e.target.tagName === 'SPAN') {
             e.target.parentElement.remove();
+            saveData();
         }
         if(pending_container.children.length === 0) {
             show.style.display = "none";
+            saveData();
         }
     });
 
@@ -54,10 +55,26 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             pending_container.appendChild(revoke);
             e.target.remove();
+            saveData();
         } else if(e.target.tagName === 'SPAN') {
             e.target.parentElement.remove();
+            saveData();
         }
     });
 
 
+    function saveData() {
+        localStorage.setItem('pending-data', pending_container.innerHTML);
+        localStorage.setItem('complete-data', complete_container.innerHTML);
+    }
+
+    function showData() {
+        pending_container.innerHTML = localStorage.getItem('pending-data');
+        complete_container.innerHTML = localStorage.getItem('complete-data');
+        if(pending_container.children.length != 0) {
+            show.style.display = "block";
+        }
+        
+    }
+    showData();
 });
