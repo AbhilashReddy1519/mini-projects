@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Special Gothic Expanded One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.todo {
+    background: linear-gradient(0deg , #152782, #564398,#527893);
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px 0px 30px; /* // The auto value only works with margin, not with padding */
+}
+
+.container {
+    background-color: white;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 20px;
+    margin: 20px auto 200px;
+    padding: 20px 0 50px;
+}
+
+.container h1 {
+    font-size: 2.5rem;
+    display: flex;
+    align-items: center;
+    color: #010c4d;
+    text-align: center;
+    justify-content: space-between;
+    margin: 10px 170px 10px 120px;
+}
+
+.container h1 img {
+    width: 50px;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+.todo-tasks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: rgb(220, 218, 218); */
+    margin: 10px 40px;
+    padding: 10px 0;
+    /* border-radius: 30px; */
+}
+
+input {
+    flex: 1;
+    padding: 15px 10px;
+    font-size: 1rem;
+    border: 1px dashed black;
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.3s ease-in;
+}
+
+input:hover {
+    border: 1px solid rgb(52, 52, 201);
+}
+
+input:focus {
+    border: 1px solid red;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.3);
+}
