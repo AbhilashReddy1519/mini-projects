@@ -32,9 +32,9 @@ Feel free to explore the individual project folders to learn more about each pro
 
 This repository primarily utilizes the following technologies:
 
-- **CSS** - For styling and layout (89.7% of the repository).
-- **JavaScript** - For logic and interactivity (5.3% of the repository).
-- **HTML** - For structuring web content (5% of the repository).
+- **CSS** - For styling and layout.
+- **JavaScript** - For logic and interactivity.
+- **HTML** - For structuring web content.
 
 ## Getting Started
 
