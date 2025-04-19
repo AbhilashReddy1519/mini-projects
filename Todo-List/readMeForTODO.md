@@ -2,7 +2,8 @@
 
 A sleek and interactive todo list application built with HTML, CSS, and JavaScript. Features task management with completed and pending sections, local storage persistence, and smooth animations.
 
-![Todo List App](./images/todoIcon.png)
+![ToDo List Application](https://github.com/user-attachments/assets/184169b9-f2b2-43f0-bf7f-d0be6e7770e9)
+
 
 ## Features
 
@@ -43,6 +44,13 @@ git clone https://github.com/AbhilashReddy1519/todo-list.git
 ```
 
 2. Open `index.html` in your browser
+
+## Preview of application
+
+![Index](https://github.com/user-attachments/assets/85cbe3db-c61c-493a-a285-9c6e241b66d7)
+![Before Adding Task](https://github.com/user-attachments/assets/f34a4057-0bea-4afc-bd7c-1544868021e2)
+![After adding task](https://github.com/user-attachments/assets/33a75847-c549-4cff-9ab6-4185b8b0bf31)
+![Completed Tasks](https://github.com/user-attachments/assets/3bf3ab53-bda5-4c1c-8c8f-c3280a4a9bf1)
 
 ## Contributing
 
